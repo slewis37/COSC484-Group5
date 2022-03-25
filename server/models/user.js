@@ -1,5 +1,10 @@
-import mongoose from 'mongoose';
 
+/*\
+ *
+ * This is where we declare the structure of the data we're storing in the database.
+ * 
+\*/
+import mongoose from 'mongoose';
 
 const userSchema = mongoose.Schema({
     email: String,

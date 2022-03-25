@@ -1,0 +1,6 @@
+- Need a state component to keep track of the currently logged in user between pages. 
+    This should be relatively easy if we take a dep on Redux or flux, but im not sure what's
+    best.
+
+- Need to decide on how styling should be handled. are we doing everything or are we using
+    bootstrap / material-ui?

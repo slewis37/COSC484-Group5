@@ -1,3 +1,11 @@
+/*\
+ *
+ * These are all functions that handle different HTTP requests. 
+ * They get used in files in the 'server/routes/' folder.
+ * 'req' is the request document and 'res' is the response document.  
+ * 
+\*/
+
 import argon2 from 'argon2';
 import {User} from '../models/user.js';
 const testCallback = (fnName, res) =>{
