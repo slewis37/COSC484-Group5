@@ -24,9 +24,7 @@ app.use(cors());
 
 //////////////////////////////////
 /*  CHANGE TO ENV VARIABLE      */
-    const atlasUname = 'g5admin';
-    const atlasPassword = 's22gp484';
-    const CONNECTION_URL = 'mongodb+srv://g5admin:s22gp484@cosc484-g5.lfxak.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+    const CONNECTION_URL = 'CHANGE_ME';
 //////////////////////////////////
 const PORT = process.env.PORT || 5000;
 
