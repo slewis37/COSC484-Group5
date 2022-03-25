@@ -1,0 +1,5 @@
+/*\
+ *
+ *  Register a new account
+ * 
+\*/

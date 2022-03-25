@@ -1,0 +1,5 @@
+/*\
+ *
+ *  View a full recipe
+ * 
+\*/
