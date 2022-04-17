@@ -5,7 +5,7 @@
 \*/
 
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -25,10 +25,10 @@ const Home = () => {
     
 
         <div className="btns">
-            
-                <button  type="button" className="register-btn">REGISTER</button>
+
+                <Link to="/register"><button  type="button" className="register-btn">REGISTER</button></Link>
            
-                <button type="button" className="login-btn">LOGIN</button>
+                <Link to="/login"><button  type="button" className="login-btn">LOGIN</button></Link>
             
         </div>
     </div>
