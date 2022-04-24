@@ -16,8 +16,13 @@ const Generate = ({ findReceipes }) => {
 
 
         <
-        button > Generate Recipes Here < /button> < /
-        form >
+        button > Generate Recipes Here < /button> 
+
+
+
+
+        <
+        / form >
     );
 
 };

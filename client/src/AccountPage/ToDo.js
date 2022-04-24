@@ -7,8 +7,17 @@ const ToDo = ({ todo, handleToggle }) => {
         handleToggle(e.currentTarget.id)
     }
 
-    return ( <
+    return (
+
+        <
+        div class = "pntryHead" > < header > < h6 > test < /h6> </header > < /div>,
+
+
+        <
         div id = { todo.id }
+
+
+
         key = { todo.id + todo.task }
         name = "todo"
         value = { todo.id }
@@ -17,5 +26,8 @@ const ToDo = ({ todo, handleToggle }) => {
         /div>
     );
 };
+
+
+
 
 export default ToDo;

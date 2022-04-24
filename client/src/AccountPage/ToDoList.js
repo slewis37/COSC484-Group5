@@ -1,9 +1,17 @@
 import React from 'react';
 import ToDo from './ToDo';
 
+
 const ToDoList = ({ toDoList, handleToggle, handleFilter }) => {
-    return ( <
-        div > {
+    return (
+
+
+
+        <
+        div class = "text-center" > {
+
+
+
             toDoList.map(todo => {
                 return ( <
                     ToDo todo = { todo }
@@ -14,9 +22,11 @@ const ToDoList = ({ toDoList, handleToggle, handleFilter }) => {
             })
         } <
         button style = {
-            { margin: '20px' }
+            {
+                margin: '20px'
+            }
         }
-        onClick = { handleFilter } > Clear Pantry < /button> < /
+        onClick = { handleFilter } > Clear Pantry < /button>  < /
         div >
     );
 };

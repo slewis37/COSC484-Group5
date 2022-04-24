@@ -13,7 +13,11 @@ const ToDoForm = ({ addIngrediant }) => {
         addIngrediant(userInput);
         setUserInput("");
     }
-    return ( <
+    return (
+
+
+
+        <
         form onSubmit = { handleIngrediant } >
         <
         input value = { userInput }
@@ -21,8 +25,15 @@ const ToDoForm = ({ addIngrediant }) => {
         onChange = { handleChange }
         placeholder = "Enter Ingrediant..." / >
         <
-        button > Add Ingrediant < /button> < /
+        button > Add Ingrediant < /button> 
+
+
+        <
+        /
         form >
+
+
+
     );
 };
 

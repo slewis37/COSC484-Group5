@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 //testing data
 import data from "./data.json";
 //components
-import Header from "./Header";
 import ToDoList from "./ToDoList";
 import ToDoForm from './ToDoForm';
 import Generate from './Generate';
@@ -39,11 +38,16 @@ function App() {
     return ( <
         div className = "App" >
         <
-        Header /
-        >
+        header class = "page-header" >
         <
-        pantryHeader / >
+        h1 > Welcome To Your Account! < /h1> < /
+        header >
+
         <
+        main className = 'list-label' >
+        <
+        p > < b > < em > Pantry List: < /em>  < /b > < /p > < /
+        main > <
         ToDoList toDoList = { toDoList }
         handleToggle = { handleToggle }
         handleFilter = { handleFilter }
