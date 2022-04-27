@@ -1,3 +1,9 @@
+/*\
+ *
+ *  View and manage food items in inventory
+ * 
+\*/
+
 import React, { useState } from 'react';
 //testing data
 import data from "./data.json";
@@ -5,8 +11,10 @@ import data from "./data.json";
 import ToDoList from "./ToDoList";
 import ToDoForm from './ToDoForm';
 import Generate from './Generate';
+import './AccountPage.css';
 
-function App() {
+
+const Inventory = () => {
 
     const [toDoList, setToDoList] = useState(data);
 
@@ -23,7 +31,8 @@ function App() {
             });
             setToDoList(filtered);
         }
-        //adds ingredaisnts to a list
+        //adds ingredaisnts to a list 
+        //this is where the code gets submitted to the database
     const addIngrediant = (userInput) => {
             let copy = [...toDoList];
             copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
@@ -34,7 +43,6 @@ function App() {
 
         }
         //need to add another list for allergies
-
     return ( <
         div className = "App" >
         <
@@ -59,5 +67,4 @@ function App() {
         div >
     );
 }
-
-export default App;
+export default Inventory;
