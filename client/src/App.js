@@ -13,15 +13,15 @@ import Register from "./components/register_component.js";
 
 function App(){
   return (
-      <>
-        <Navbar/>
-        <Home/>
-        <Register/>
-        <Login/>
-        <RecipeView/>
-        <RecipeSearch/>
-        <Inventory/>
-      </>
+    //<>
+   //   <Navbar/>
+   //   <Home />
+   //   <Register />
+  //    <Login />
+  //    <RecipeView />
+      <RecipeSearch />
+  //    <Inventory />
+    //</>
     // <Router>
     //   <Navbar />
     //   <br/>
