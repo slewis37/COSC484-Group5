@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 const Home = () => {
+
     
     return (
         <div className="full-contain">
@@ -32,7 +33,5 @@ const Home = () => {
             
         </div>
     </div>
-    );
-}
 
 export default Home;
