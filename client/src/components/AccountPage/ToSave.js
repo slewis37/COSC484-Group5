@@ -1,6 +1,6 @@
 import React from 'react';
 //handles the strike out if item no longer needed
-const ToDo = ({ todo, handleToggle }) => {
+const ToSave = ({ ingre, handleToggle }) => {
 
     const handleClick = (e) => {
         e.preventDefault()
@@ -14,15 +14,15 @@ const ToDo = ({ todo, handleToggle }) => {
 
 
         <
-        div id = { todo.id }
+        div id = { ingre.id }
 
 
 
-        key = { todo.id + todo.task }
-        name = "todo"
-        value = { todo.id }
+        key = { ingre.id + ingre.task }
+        name = "ingre"
+        value = { ingre.id }
         onClick = { handleClick }
-        className = { todo.complete ? "todo strike" : "todo" } > { todo.task } <
+        className = { ingre.complete ? "ingre strike" : "ingre" } > { ingre.task } <
         /div>
     );
 };
@@ -30,4 +30,4 @@ const ToDo = ({ todo, handleToggle }) => {
 
 
 
-export default ToDo;
+export default ToSave;

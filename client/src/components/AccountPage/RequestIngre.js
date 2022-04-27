@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //handles the tod list entering an ingrediant list
-const ToDoForm = ({ addIngrediant }) => {
+const RequestIngre = ({ addIngrediant }) => {
 
     const [userInput, setUserInput] = useState('');
 
@@ -37,4 +37,4 @@ const ToDoForm = ({ addIngrediant }) => {
     );
 };
 
-export default ToDoForm;
+export default RequestIngre;

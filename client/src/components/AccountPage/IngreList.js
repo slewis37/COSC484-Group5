@@ -1,8 +1,8 @@
 import React from 'react';
-import ToDo from './ToDo';
+import ToSave from './ToSave.js';
 
 
-const ToDoList = ({ toDoList, handleToggle, handleFilter }) => {
+const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
     return (
 
 
@@ -12,9 +12,9 @@ const ToDoList = ({ toDoList, handleToggle, handleFilter }) => {
 
 
 
-            toDoList.map(todo => {
+            ingreList.map(ingre => {
                 return ( <
-                    ToDo todo = { todo }
+                    ToSave ingre = { ingre }
                     handleToggle = { handleToggle }
                     handleFilter = { handleFilter }
                     />
@@ -31,7 +31,7 @@ const ToDoList = ({ toDoList, handleToggle, handleFilter }) => {
     );
 };
 
-export default ToDoList;
+export default IngreList;
 //this clear the striked out ingrreaint that user no longer needs
 //can and will delete mutiples
 //butt refresh clear all strikes out if not deleted

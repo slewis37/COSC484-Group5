@@ -8,43 +8,42 @@ import React, { useState } from 'react';
 //testing data
 import data from "./data.json";
 //components
-import ToDoList from "./ToDoList";
-import ToDoForm from './ToDoForm';
-import Generate from './Generate';
+import IngreList from "./IngreList.js";
+import RequestIngre from './RequestIngre.js';
+import Generate from './Generate.js';
 import './AccountPage.css';
 
 
 const Inventory = () => {
 
-    const [toDoList, setToDoList] = useState(data);
+    const [ingreList, setIngreList] = useState(data);
 
     const handleToggle = (id) => {
-        let mapped = toDoList.map(task => {
+        let mapped = ingreList.map(task => {
             return task.id === Number(id) ? {...task, complete: !task.complete } : {...task };
         });
-        setToDoList(mapped);
+        setIngreList(mapped);
     }
 
     const handleFilter = () => {
-            let filtered = toDoList.filter(task => {
+            let filtered = ingreList.filter(task => {
                 return !task.complete;
             });
-            setToDoList(filtered);
+            setIngreList(filtered);
         }
         //adds ingredaisnts to a list 
         //this is where the code gets submitted to the database
     const addIngrediant = (userInput) => {
-            let copy = [...toDoList];
-            copy = [...copy, { id: toDoList.length + 1, task: userInput, complete: false }];
-            setToDoList(copy);
+            let copy = [...ingreList];
+            copy = [...copy, { id: ingreList.length + 1, task: userInput, complete: false }];
+            setIngreList(copy);
         }
         //will handle switching to next page to generate receipes
     const findReceipes = () => {
 
         }
         //need to add another list for allergies
-    return ( <
-        div className = "App" >
+    return ( < div className = "App" >
         <
         header class = "page-header" >
         <
@@ -56,11 +55,11 @@ const Inventory = () => {
         <
         p > < b > < em > Pantry List: < /em>  < /b > < /p > < /
         main > <
-        ToDoList toDoList = { toDoList }
+        IngreList ingreList = { ingreList }
         handleToggle = { handleToggle }
         handleFilter = { handleFilter }
         /> <
-        ToDoForm addIngrediant = { addIngrediant }
+        RequestIngre addIngrediant = { addIngrediant }
         /><
         Generate findReceipes = { findReceipes }
         /> < /
