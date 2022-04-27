@@ -11,9 +11,9 @@ import Navbar from "./components/navbar_component.js";
 import RecipeSearch from "./components/recipeSearch_component.js";
 import RecipeView from "./components/recipeView_component.js";
 import Register from "./components/register_component.js";
-import Support from "./components/support_component.js";
-import Cuisines from "./components/cuisines_component.js";
-import Drinks from "./components/drinks_component.js";
+// import Support from "./components/support_component.js";
+// import Cuisines from "./components/cuisines_component.js";
+// import Drinks from "./components/drinks_component.js";
 
 function App(){
   return (
@@ -36,9 +36,9 @@ function App(){
       <Route path="/recipeView" exact element={<RecipeView/>} ></Route>
       <Route path="/recipeSearch" exact element={<RecipeSearch/>} ></Route>
       <Route path="/inventory" exact element={<Inventory/>} ></Route>
-      <Route path="/support" exact element={<Support/>} ></Route>
+      {/* <Route path="/support" exact element={<Support/>} ></Route>
       <Route path="/cuisines" exact element={<Cuisines/>} ></Route>
-      <Route path="/drinks" exact element={<Drinks/>} ></Route>
+      <Route path="/drinks" exact element={<Drinks/>} ></Route> */}
       </Routes>
     </Router>
   );
