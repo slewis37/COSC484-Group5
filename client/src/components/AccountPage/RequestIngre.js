@@ -25,7 +25,7 @@ const RequestIngre = ({ addIngrediant }) => {
         onChange = { handleChange }
         placeholder = "Enter Ingrediant..." / >
         <
-        button > Add Ingrediant < /button> 
+        button > Add Ingredient < /button> 
 
 
         <
