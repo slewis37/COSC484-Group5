@@ -5,14 +5,14 @@
  * HTTP requests and establishing a connection to the database.
  * 
 \*/
-
+import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
 import usersRouter from './routes/users.js';
-
+dotenv.config();
 const app = express();
 
 app.use('/users', usersRouter);// http://localhost:5000/users
@@ -22,10 +22,8 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
 
 app.use(cors());
 
-//////////////////////////////////
-/*  CHANGE TO ENV VARIABLE      */
-    const CONNECTION_URL = 'CHANGE_ME';
-//////////////////////////////////
+
+const CONNECTION_URL = ''+process.env.ATLAS_URI;
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
