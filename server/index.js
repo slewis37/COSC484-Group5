@@ -11,11 +11,11 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import usersRouter from './routes/users.js';
+import router from './routes/users.js';
 dotenv.config();
 const app = express();
 
-app.use('/users', usersRouter);// http://localhost:5000/users
+app.use('/users', router);// http://localhost:5000/users
 
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
