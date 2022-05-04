@@ -11,16 +11,8 @@ const userSchema = mongoose.Schema({
     fname: String,
     lname: String,
     password: String,
-    inventory: [
-        {
-            name: {type: String, required: true},
-            quantity: {
-                amount: {type: Number, required: true},
-                unit: {type: String, required: true},
-            },
-        }
-    ],
+    inventory: [String],
 });
 
-const User = mongoose.Model('User', userSchema);
+const User = mongoose.model('User', userSchema);
 export default User;

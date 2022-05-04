@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("background.jpg");
+    background-position: center;
+    height: 1000px;
+    background-size: cover;
+}
+
+.page-header {
+    text-align: center;
+}
+
+.list-label {
+    text-align: center;
+    font-size: large;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+/* allows list to be clickable*/
+
+.ingre {
+    cursor: pointer;
+    text-align: center;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+
+/* centers pantry list*/
+
+.text-center {
+    text-align: center;
+}
+
+
+/* align cler pantry button, ingredant input, and generate receipes*/
+
+form {
+    text-align: center;
+    white-space: normal;
+    margin-bottom: 20px;
+    display: block;
+}
