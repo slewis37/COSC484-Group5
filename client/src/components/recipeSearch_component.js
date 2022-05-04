@@ -17,19 +17,34 @@ import React, {} from 'react';
 const RecipeSearch = () => {
 
 
-    return (
+        return (
 
-        <
-        div className = "app" >
-        hello <
-        /div>
-
-
+            <
+            div className = "app" >
+            hello <
+            /div>
 
 
 
-    );
 
+
+        );
+
+
+    }
+    // RECIPE CONTENT FOR CARD
+const RecipeContent = ({ recipeData, missingIngredients }) => {
+    const {
+        image,
+        title,
+        extendedIngredients,
+        analyzedInstructions,
+        sourceUrl,
+        creditsText,
+    } = recipeData;
 }
+
+
+//const RecipeCard = ({ id, title, image, missingIngredients = null }) => {
 
 export default RecipeSearch;
