@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 //handles the strike out if item no longer needed
 const ToSave = ({ ingre, handleToggle }) => {
 
@@ -9,12 +10,14 @@ const ToSave = ({ ingre, handleToggle }) => {
 
     return (
 
-        <
-        div class = "pntryHead" > < header > < h6 > test < /h6> </header > < /div>,
+        <div class = "pntryHead"> 
+        <header> 
+        <h6> test </h6> 
+        </header> 
+        </div>,
 
 
-        <
-        div id = { ingre.id }
+        <div id = { ingre.id }
 
 
 
@@ -22,8 +25,8 @@ const ToSave = ({ ingre, handleToggle }) => {
         name = "ingre"
         value = { ingre.id }
         onClick = { handleClick }
-        className = { ingre.complete ? "ingre strike" : "ingre" } > { ingre.task } <
-        /div>
+        className = { ingre.complete ? "ingre strike" : "ingre" } > { ingre.task } 
+        </div>
     );
 };
 
