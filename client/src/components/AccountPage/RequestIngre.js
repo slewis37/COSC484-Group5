@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 //handles the tod list entering an ingrediant list
 const RequestIngre = ({ addIngrediant }) => {
 
@@ -23,7 +24,7 @@ const RequestIngre = ({ addIngrediant }) => {
         input value = { userInput }
         type = "text"
         onChange = { handleChange }
-        placeholder = "Enter Ingrediant..." / >
+        placeholder = "Enter Ingredient..." / >
         <
         button > Add Ingredient < /button> 
 
@@ -32,7 +33,7 @@ const RequestIngre = ({ addIngrediant }) => {
         /
         form >
 
-
+        //add post request using axios to send the add ingredant to dB
 
     );
 };
