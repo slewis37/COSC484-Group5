@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+</head> 
+<body style="background-color: black;">
+    <script type = "text/javascript">
+        function approvePassword(){
+            var password = document.getElementById("password").value; 
+            var verify = document.getElementById("verify").value;
+            //if passwords don't match for sign up, alert user
+            if (password != verify){
+            window.alert("ensure passwords match");
+            return false;
+            }
+            //if password is less than 8 or more than 20 alert user 
+        if (password.length < 8){
+        window.alert("password must be at least 8 characters long");
+        return false;
+        } else if(password.length > 20){
+        window.alert("password must be 20 characters or less");
+        return false; 
+        } else return true;
+        //tried using regex here to require a special character, number, and letter
+        //not working 
+            if (password.search((/[a-z]/i)<0)){
+            window.alert("your password must have at least one letter"); 
+            } else if (password.search((/[0-9]/))<0){
+            window.alert("your password must have at least one number");
+            } else if (password.search((/[!#$%&?]/))<0){
+            window.alert("your password must have at least one special character");
+            }else return true;
+        }
+        function usernameLength(){
+        var username = document.getElementById("username").value; 
+        //if username is less than 6 or more than 15 alert user
+        if (username.length < 6){
+        window.alert("username must be at least 6 characters long");
+        return false;
+        } else if(username.length > 15){
+        window.alert("username must be 15 characters or less");
+        return false; 
+        } else return true;
+} 
+ 
+    </script>
+    <style>
+        #left{
+    	width: 56%;
+        box-sizing: border-box;
+ 		display: inline-block;
+        float: left;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    #right{
+    	width: 40%;
+        box-sizing: border-box;
+ 		display: inline-block;
+        float: right;
+        padding: 0 0 0 175px;
+        margin: 0 auto;
+        
+    }
+    #content img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 40%;
+
+}
+    </style>
+    <div id = "content">
+        <img> <img src="food.jpg" alt="food"></img>
+        <!--image source: https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dcartoon%2520food&psig=AOvVaw2t-aKBgsImujWFIY8bf6C6&ust=1648250773152000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjfnYnz3_YCFQAAAAAdAAAAABAD-->
+    </div>
+    <h1 style="text-align:center; color: yellow;"><b>EasyEatsTu Login</b></h1>
+     <div id="right">
+    <form id = "new"  onsubmit = "approvePassword() && usernameLength()">
+        <br>
+        <h2 style="color: yellow;"><b>New User? Sign Up Here!</b></h2>
+        <b style="color: yellow;">Username (must be between 6-15 characters)</b></br>
+        <input type="text" name="Username" id = "username"  /></br>
+        <b style="color: yellow;">Email Address</b></br>
+        <input type="email" name="Email" id="email"  /></br>
+        <b style="color: yellow;">Birthday</b></br>
+        <input type="date" name="Birthday" id="birthday"  /></br>
+        <b style="color: yellow;">Password</b>
+        <br>
+        <b style="color: yellow;">(must be 8-20 characters,include at least</b>
+        <br>
+        <b style="color: yellow;">one number and one special character)</b>
+        <br>
+        <input type="password" name="Password" id = "password"  /></br>
+        <b style="color: yellow;">Verify Password</b></br>
+        <input type="password" name="Verify" id = "verify"  /></br>
+        <input type="submit" id="submit">
+    </form>
+</div> 
+<div id="left">
+            <form id = "old" value = "old" style="margin-bottom: 250px">
+                <br>
+                <br>
+                
+                <h2 style="color: yellow;"><b>Login to Your Account</b></h2>
+                <b style="color: yellow;">Username</b></br>
+                <input type="text" name="Username" id = "username"  /></br>
+                <b style="color: yellow;">Password</b></br>
+                <input type="password" name="Password" id = "password"  /></br>
+                <input type="submit" id="submit">
+            </form>
+        </div> 
+</body>
+</html>
