@@ -1,5 +1,12 @@
 import React from 'react';
 import ToSave from './ToSave.js';
+import axios from 'axios';
+
+//here called the ingrlist using the unique ID from Db
+//param of user// body is user.data
+//userID
+
+
 
 
 const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
@@ -19,8 +26,15 @@ const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
                 margin: '20px'
             }
         }
-        onClick = { handleFilter }> Clear Pantry </button>  
-        </div>
+
+        //on click send post request with axios to the DB
+        onClick = { handleFilter } > Clear Pantry < /button> 
+
+
+        <
+        /
+        div >
+
     );
 };
 

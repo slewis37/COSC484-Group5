@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+	<title>EasyEatsTU</title>
+	<link rel = "stylesheet" href = "AccountRegistration.css">
+	<meta charset = "utf-8">
+	</head>
+
+	<body>
+		<h1>EasyEatsTU Account Registration</h1>
+		
+		<h3>Click The Sign Up Button To Get Started!</h3>
+		<button onClick = "document.getElementById('suId').style.display = 'block'" style = "width : auto">Sign Up</button>
+
+		<div id = "suId" class = "suClass">
+			<span onclick = "document.getElementById('suId').style.display = 'none'" class = "closeForm" title = "Close Form">&times;</span>
+			<form class = "suContent" action = "beekeeper_completed.html" method = "get">
+				<div class = "contain">
+					<h2>Please Fill Out The Fields To Sign Up</h2>
+					<hr>
+					<label for = "uname">Username</label><br></br>
+					<input type = "text" id = "uname" name = "uname" placeholder = "Enter Username" required><br></br>
+					
+					<label for = "email">Email Address</label><br></br>
+					<input type = "text" id = "email" name = "email" placeholder = "Enter Email" required><br></br>
+					
+					<label for = "pword">Password</label><br></br>
+					<input type = "password" id = "pword" name = "pword" placeholder = "Enter Password" required><br></br>
+					<label for = "vpword">Verify Password</label><br></br>
+					<input type = "password" id = "vpword" name = "vpword" placeholder = "Verify Password" required><br></br>
+					
+					<div class = "clear">
+						<button type = "button" onclick = "document.getElementById('suId').style.display = 'none'" class = "cancel">Cancel</button>
+						<button type = "submit" class = "signup">Sign Up</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

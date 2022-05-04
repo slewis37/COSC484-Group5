@@ -10,7 +10,7 @@
 
 import express from 'express';
 import argon2 from 'argon2';
-import {User} from '../models/user.js';
+import User from '../models/user.js';
 
 const router = express.Router();
 
@@ -40,7 +40,7 @@ router.route('/add').post(async (req, res) => {
 });
 
 //get user by login credentials
-usersRouter.route('/login').post(async(req, res) => {
+router.route('/login').post(async(req, res) => {
     const email = req.body.email;
     const password = req.body.password;
 
@@ -60,14 +60,14 @@ usersRouter.route('/login').post(async(req, res) => {
 });
 
 // delete
-usersRouter.route('/:id').delete((req, res) => {
+router.route('/:id').delete((req, res) => {
     User.findByIdAndDelete(req.params.id)
         .then(() => res.status(200).json('User deleted'))
         .catch(err => res.status(400).json('ERROR: ' + err));
 });
 
 //update by id
-usersRouter.route('/update/:id').post((req, res) => {
+router.route('/update/:id').post((req, res) => {
     var options = { upsert: false, new: true };
     User.findByIdAndUpdate(req.params.id, req.body, options, function(e, user) {
         if(e){ res.send(e); }
@@ -76,7 +76,7 @@ usersRouter.route('/update/:id').post((req, res) => {
 });
 
 //update by email
-usersRouter.route('/update/email/:email').post((req, res) => {
+router.route('/update/email/:email').post((req, res) => {
     var options = { upsert: false, new: true };
     User.findOneAndUpdate({email: req.body.email}, req.body, options, function(e, user) {
         if(e){ res.send(e) }
@@ -98,20 +98,20 @@ router.route('/').get((req, res) => {
 });
 
 //by id
-usersRouter.route('/:id').get((req, res) => {
+router.route('/:id').get((req, res) => {
     User.findById(req.params.id)
         .then(user => res.json(user))
         .catch(e => res.status(400).json('ERROR - ' + e));
 });
 
 //by email
-usersRouter.route('/email/:email').get((req, res) => {
+router.route('/email/:email').get((req, res) => {
     User.findOne({email: req.params.email})
         .then(user => res.json(user))
         .catch(e => res.status(400).json('ERROR - ' + e));
 });
 
-usersRouter.route('/update/email/:email').get((req, res) => {
+router.route('/update/email/:email').get((req, res) => {
     var options = { upsert: true, new: true };
     User.updateOne({email: req.params.email}, {$set: {"email": req.body.email}}, options, (e) => {
         if(e){ res.send(e); }
