@@ -17,6 +17,7 @@ import Register from "./components/register_component.js";
 // import Drinks from "./components/drinks_component.js";
 
 
+
 function App() {
     return (
         // <>
@@ -44,6 +45,7 @@ function App() {
         </Routes> 
         </Router>
     );
+
 }
 
 export default App;

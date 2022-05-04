@@ -12,13 +12,7 @@ import axios from 'axios';
 const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
     return (
 
-
-
-        <
-        div class = "text-center" > {
-
-
-
+        <div class = "text-center"> {
             ingreList.map(ingre => {
                 return ( <
                     ToSave ingre = { ingre }
@@ -27,12 +21,12 @@ const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
                     />
                 )
             })
-        } <
-        button style = {
+        } <button style = {
             {
                 margin: '20px'
             }
         }
+
         //on click send post request with axios to the DB
         onClick = { handleFilter } > Clear Pantry < /button> 
 
@@ -40,6 +34,7 @@ const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
         <
         /
         div >
+
     );
 };
 

@@ -18,20 +18,18 @@ const RequestIngre = ({ addIngrediant }) => {
 
 
 
-        <
-        form onSubmit = { handleIngrediant } >
-        <
-        input value = { userInput }
+        <form onSubmit = { handleIngrediant }>
+        <input value = { userInput }
         type = "text"
         onChange = { handleChange }
+
         placeholder = "Enter Ingredient..." / >
         <
         button > Add Ingredient < /button> 
 
 
-        <
-        /
-        form >
+
+        </form>
 
         //add post request using axios to send the add ingredant to dB
 
