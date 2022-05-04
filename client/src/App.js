@@ -7,11 +7,11 @@ import './index.css';
 import Home from "./components/home_component.js";
 import Inventory from "./components/AccountPage/inventory_component.js";
 
-import Login from "./components/login_component.js";
+import Login from "./components/login.js";
 import Navbar from "./components/navbar_component.js";
 import RecipeSearch from "./components/recipeSearch_component.js";
 import RecipeView from "./components/recipeView_component.js";
-import Register from "./components/register_component.js";
+import Register from "./components/AccountPage/register_component.js";
 // import Support from "./components/support_component.js";
 // import Cuisines from "./components/cuisines_component.js";
 // import Drinks from "./components/drinks_component.js";
@@ -24,7 +24,7 @@ function App() {
         //   <Navbar/>
         //   <Home/>
         //   <Register/>
-        //   <Login/>
+        //  <Login/>
         //   <RecipeView/>
         //   <RecipeSearch/>
         //   <Inventory/>
