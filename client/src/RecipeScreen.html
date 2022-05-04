@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang=“en”>
+  <head>
+    <meta charset=“utf-8”>
+    <link rel="stylesheet" href="">
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <script>
+    // TODO: POPULATE SELECT CHOICES FROM DB
+    
+
+    // Protein select list
+    function proteinList() {
+      var mylist = document.getElementById("proList");
+      document.getElementById("protein").value = proList.options[proList.selectedIndex].text;
+    }
+
+    // Carbohydrate select list  
+    //
+    function carbohydrateList() {
+      var mylist = document.getElementById("carbList");
+      document.getElementById("carb").value = carbList.options[carbList.selectedIndex].text;
+    }
+
+    // Veggie select list
+    function vegetableList() {
+      var mylist = document.getElementById("veggieList");
+      document.getElementById("veg").value = veggieList.options[veggieList.selectedIndex].text;
+    }
+
+    // Unused function
+    function recipeSearch() {
+      /*
+        
+				
+				<form method="get" action="displayRecipes.html">  
+        */
+    }
+
+    //TODO: OnSubmit should display recipe search results containing the selected ingredients on the same page. (or redirect to new page whichever makes the most sense)
+    //TODO: OnSubmit should display all selected ingredients and allow user to easily remove/add additional ingredients.
+  </script>
+
+  <body>
+    <! –– title ––>
+      <h1>Recipe Finder</h1>
+
+      <! –– form to collect input ––>
+        <form name="inputForm" method="post" onsubmit="getFormvalue()">
+
+          <fieldset>
+
+            <! –– protein list ––>
+              <div><b> Select a type of protein</b><select id="proList" onchange="proteinList()">
+                  <option> ---Choose protein--- </option>
+                  <option> protein 1 </option>
+                  <option> protein 2</option>
+                  <option> protein 3</option>
+                </select>
+                <p> Your selected protein is: <input type="text" id="protein" size="20"></p>
+              </div>
+
+              <! –– carbohydrate list ––>
+                <div><b> Select a type of carbohydrate</b><select id="carbList" onchange="carbohydrateList()">
+                    <option> ---Choose type of carb--- </option>
+                    <option> carb 1 </option>
+                    <option> carb 2</option>
+                    <option> carb 3</option>
+                  </select>
+                  <p> Your selected carb is: <input type="text" id="carb" size="20"></p>
+                </div>
+
+                <! –– vegetable list ––>
+                  <div><b> Select vegetables</b><select id="veggieList" onchange="vegetableList()">
+                      <option> ---Choose vegetables--- </option>
+                      <option> veggie 1 </option>
+                      <option> veggie 2</option>
+                      <option> veggie 3</option>
+                    </select>
+                    <p> Your selected vegetable is: <input type="text" id="veg" size="20"></p>
+                  </div>
+
+                  <! –– submit button ––>
+                    <div><input type="submit"></div>
+          </fieldset>
+        </form>
+  </body>
+</html>

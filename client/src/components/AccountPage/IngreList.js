@@ -1,17 +1,18 @@
 import React from 'react';
 import ToSave from './ToSave.js';
+import axios from 'axios';
+
+//here called the ingrlist using the unique ID from Db
+//param of user// body is user.data
+//userID
+
+
 
 
 const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
     return (
 
-
-
-        <
-        div class = "text-center" > {
-
-
-
+        <div class = "text-center"> {
             ingreList.map(ingre => {
                 return ( <
                     ToSave ingre = { ingre }
@@ -20,14 +21,20 @@ const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
                     />
                 )
             })
-        } <
-        button style = {
+        } <button style = {
             {
                 margin: '20px'
             }
         }
-        onClick = { handleFilter } > Clear Pantry < /button>  < /
+
+        //on click send post request with axios to the DB
+        onClick = { handleFilter } > Clear Pantry < /button> 
+
+
+        <
+        /
         div >
+
     );
 };
 
