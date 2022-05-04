@@ -5,13 +5,7 @@ import ToSave from './ToSave.js';
 const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
     return (
 
-
-
-        <
-        div class = "text-center" > {
-
-
-
+        <div class = "text-center"> {
             ingreList.map(ingre => {
                 return ( <
                     ToSave ingre = { ingre }
@@ -20,14 +14,13 @@ const IngreList = ({ ingreList, handleToggle, handleFilter }) => {
                     />
                 )
             })
-        } <
-        button style = {
+        } <button style = {
             {
                 margin: '20px'
             }
         }
-        onClick = { handleFilter } > Clear Pantry < /button>  < /
-        div >
+        onClick = { handleFilter }> Clear Pantry </button>  
+        </div>
     );
 };
 

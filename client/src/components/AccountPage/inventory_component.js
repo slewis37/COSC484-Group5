@@ -12,7 +12,7 @@ import IngreList from "./IngreList.js";
 import RequestIngre from './RequestIngre.js';
 import Generate from './Generate.js';
 import './AccountPage.css';
-
+import RecipeSearch from '../recipeSearch_component';
 
 const Inventory = () => {
 
@@ -39,31 +39,27 @@ const Inventory = () => {
             setIngreList(copy);
         }
         //will handle switching to next page to generate receipes
-    const findReceipes = () => {
+    //const findReceipes = () => {
 
-        }
+        //}
+    //const RecipeSearch = (ingreList) => {
+
+   // }
         //need to add another list for allergies
-    return ( < div className = "App" >
-        <
-        header class = "page-header" >
-        <
-        h1 > Welcome To Your Account! < /h1> < /
-        header >
+    return ( 
+        <div className = "App">
+        <header class = "page-header">
+        <h1> Welcome To Your Account! </h1>
+        </header>
 
-        <
-        main className = 'list-label' >
-        <
-        p > < b > < em > Pantry List: < /em>  < /b > < /p > < /
-        main > <
-        IngreList ingreList = { ingreList }
+        <main className = 'list-label'>
+        <p> <b> <em> Pantry List: </em>  </b> </p> </main> 
+        <IngreList ingreList = { ingreList }
         handleToggle = { handleToggle }
-        handleFilter = { handleFilter }
-        /> <
-        RequestIngre addIngrediant = { addIngrediant }
-        /><
-        Generate findReceipes = { findReceipes }
-        /> < /
-        div >
+        handleFilter = { handleFilter }/> 
+        <RequestIngre addIngrediant = { addIngrediant }/>
+        <Generate RecipeSearch = { RecipeSearch }/> 
+        </div>
     );
 }
 export default Inventory;

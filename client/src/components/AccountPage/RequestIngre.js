@@ -17,20 +17,15 @@ const RequestIngre = ({ addIngrediant }) => {
 
 
 
-        <
-        form onSubmit = { handleIngrediant } >
-        <
-        input value = { userInput }
+        <form onSubmit = { handleIngrediant }>
+        <input value = { userInput }
         type = "text"
         onChange = { handleChange }
-        placeholder = "Enter Ingrediant..." / >
-        <
-        button > Add Ingredient < /button> 
+        placeholder = "Enter Ingrediant..."/>
+        <button> Add Ingredient </button> 
 
 
-        <
-        /
-        form >
+        </form>
 
 
 
