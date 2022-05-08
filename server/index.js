@@ -15,12 +15,12 @@ import router from './routes/users.js';
 dotenv.config();
 const app = express();
 
-app.use('/users', router);// http://localhost:5000/users
 
 app.use(bodyParser.json({limit: "30mb", extended: true}));
 app.use(bodyParser.urlencoded({limit: "30mb", extended: true}));
-
 app.use(cors());
+
+app.use('/users', router);// http://localhost:5000/users
 
 
 const CONNECTION_URL = ''+process.env.ATLAS_URI;

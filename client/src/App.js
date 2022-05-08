@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; 
 import './App.css';
 import './index.css';
 
@@ -20,46 +21,42 @@ import Register from "./components/AccountRegistration/register_component.js";
 // import Cuisines from "./components/cuisines_component.js";
 // import Drinks from "./components/drinks_component.js";
 
-
+import { getUsers } from './actions/users'
 
 function App() {
+/*\
+ * THIS IS TEST CODE. WILL BE CHANGED
+\*/
+        const dispatch = useDispatch();
 
+        useEffect(()=>{
+                dispatch(getUsers());
+        },[dispatch]);
+/*\
+ * END TEST CODE
+\*/
     //const location = useLocation();
     return (
-
-            // <>
-            //   <Navbar/>
-            //   <Home/>
-            //   <Register/>
-            //   <Login/>
-            //   <RecipeView/>
-            //   <RecipeSearch/>
-            //   <Inventory/>
-            // </>
-            <
-            Router >
-            <
-            Navbar / > { /* <br/> */ } <
-            Routes >
-            <
-            Route path = "/"
-            exact element = { < Home / > } > < /Route>  <
-            Route path = "/register"
-            element = { < Register / > } > < /Route>  <
-            Route path = "/login"
-            exact element = { < Login / > } > < /Route>  <
-            Route path = "/recipeView"
-            exact element = { < RecipeView / > } > < /Route>  <
-            Route path = "/recipeSearch"
-            exact element = { < RecipeSearch / > } > < /Route>  <
-            Route path = "/inventory"
-            exact element = { < Inventory / > } > < /Route> {
-            /* <Route path="/support" exact element={<Support/>} ></Route>
-                  <Route path="/cuisines" exact element={<Cuisines/>} ></Route>
-                  <Route path="/drinks" exact element={<Drinks/>} ></Route> */
-        } <
-        /Routes>  <
-        /Router>
+        // <>
+        //   <Navbar/>
+        //   <Home/>
+        //   <Register/>
+        //   <Login/>
+        //   <RecipeView/>
+        //   <RecipeSearch/>
+        //   <Inventory/>
+        // </>
+    <Router>
+            <Navbar/> { /* <br/> */ } 
+            <Routes>
+                    <Route path = "/" exact element = { <Home/> }> </Route>  
+                    <Route path = "/register" element={<Register/>}> </Route>  
+                    <Route path = "/login" exact element={<Login/>}> </Route>  
+                    <Route path = "/recipeView" exact element={<RecipeView/>}> </Route>  
+                    <Route path = "/recipeSearch" exact element={<RecipeSearch/>}> </Route> 
+                    <Route path = "/inventory" exact element={<Inventory/>} > </Route> 
+            </Routes>  
+    </Router>
 );
 
 }
