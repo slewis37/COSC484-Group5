@@ -5,9 +5,9 @@
 \*/
 
 import React, {useState} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 //import fetchRecipes from 'components/recipeSearch_component'
-import RecipeSearch from './recipeSearch_component';
+//import RecipeSearch from './recipeSearch/recipeSearch_component';
 import styled from 'styled-components';
 
 const RecipeView = (recipes) => {
