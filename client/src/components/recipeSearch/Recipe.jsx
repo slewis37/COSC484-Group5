@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 
-function Recipe() {
+const Recipe = (searchedRecipes) => {
+	alert("in Recipe(), searchedRecipes = " +searchedRecipes)
+ function RecipeBuild(searchedRecipes) {
 	let params = useParams();
 
 	const [details, setDetails] = useState();
@@ -58,6 +60,10 @@ function Recipe() {
 			</Info>
 		</DetailWrapper>
 	);
+}
+return (
+	<RecipeBuild/>
+);
 }
 
 const DetailWrapper = styled.div`

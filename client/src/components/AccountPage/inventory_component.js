@@ -12,12 +12,11 @@ import IngreList from "./IngreList.js";
 import RequestIngre from './RequestIngre.js';
 import Generate from './Generate.js';
 import './AccountPage.css';
-import RecipeSearch from '../recipeSearch_component';
+import RecipeSearch from '../recipeSearch/recipeSearch_component';
 
 
 
 const Inventory = () => {
-
 
     const mylist = [{
         "id": 0,

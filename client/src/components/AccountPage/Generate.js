@@ -24,7 +24,6 @@ const Generate = () => {
     return (
         <div>
             <RecipeSearch generateRecipe={data}/>
-
             <div>
                 <Button primary onClick={() => generateRecipe(), }>Generate Recipes</Button>
             </div>
@@ -43,32 +42,18 @@ const Generate = () => {
         
         
     }
-
     return ( 
         <form >
-
-
         
             <Link to="/recipeSearch">Generate Recipes Here </Link>
           
-
-
-
-
         </form>
     ); */
     /*return ( 
         <form onClick={<RecipeSearch/>}>
-
-
         <button> Generate Recipes Here </button> 
-
-
-
-
         </form>
     ); 
-
 }; */
 
 export default Generate;
