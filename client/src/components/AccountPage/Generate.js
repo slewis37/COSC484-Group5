@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import RecipeSearch from '../recipeSearch_component';
+import RecipeSearch from '../recipeSearch/recipeSearch_component';
 import IngreList from './IngreList';
 import { Link } from 'react-router-dom';
 import { Button } from 'semantic-ui-react';
