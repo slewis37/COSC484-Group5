@@ -23,7 +23,7 @@ router.route('/add').post(async (req, res) => {
     const password = await argon2.hash(req.body.password);
     const inventory = [];
     
-    const newUser = new User(email, fname, lname, password, inventory);
+    const newUser = new User({email, fname, lname, password, inventory});
     
     User.count({email: email}, async (e, ct) => {
         if(e){

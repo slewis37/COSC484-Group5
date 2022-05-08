@@ -2,3 +2,5 @@
 #don't track local copies of npm packages
 */node_modules/
 *-lock.json
+*/.env
+.env

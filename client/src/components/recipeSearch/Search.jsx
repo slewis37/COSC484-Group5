@@ -7,19 +7,23 @@ import Searched from './Searched';
 
 function Search() {                 
 
+    // Hooks for props 
     const [input, setInput] = useState('');
     const [recipeData, setRecipeData] = useState([]);
-        
+    
+    // on submit of the form call Searched() passing input and recipeData 
     const submitHandler = (e) => {
         e.preventDefault();
         Searched( {input}, {recipeData, setRecipeData} );
         setInput("");   
     };
     
+    // set input 
     const changeHandler = (e) => {
         setInput(e.target.value)
     }
 
+    // if recipeData has content display recipe cards beneath search bar
     if (recipeData.length > 0) {
         return (
             <div>
@@ -50,6 +54,8 @@ function Search() {
             </main>
         </div> 
         );
+
+        // else (recipeData is empty), only display search bar
         }else {
             return(
                 <div>
@@ -70,7 +76,7 @@ function Search() {
             <main>
             
                 <div>
-                    dummy
+                    
                 </div>
 
             </main>

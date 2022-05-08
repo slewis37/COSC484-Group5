@@ -5,6 +5,7 @@ import axios from 'axios';
 
 function Searched(props) {	
 
+	//if input is collected call SearchedRecipes()
 	if (props.input != null){
 		//alert("Searched component function called!");
 		SearchedRecipes();
@@ -14,6 +15,7 @@ function SearchedRecipes() {
 
 	//alert("in child function of Searched, user's input = " +props.input)
 	
+		// create axios link
 		const recipes = axios.create({
 			baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
 			params: {
@@ -23,15 +25,16 @@ function SearchedRecipes() {
 			}
 		});
 
+		// get request to spoonacular api
 		recipes.get().then(response => {
 			console.log(response.data);
 			var x = JSON.stringify(response);
-			console.log("x = " + x);
+			
 		}).then((recipeList => {
-			recipeList.setRecipeData(recipes);
+			//recipeList.setRecipeData(recipes);
 		}) );
 		
-
+	// Displays fetched JSON data to log to be!
 	console.log("data = " + JSON.stringify(recipes));
 	console.log("data structured = " + JSON.stringify(recipes, undefined, 2));
 
