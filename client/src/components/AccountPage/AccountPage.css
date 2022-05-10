@@ -5,8 +5,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-image: url("background.jpg");
     background-position: center;
-    height: 1000px;
+    height: 6000px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .page-header {
@@ -16,6 +17,13 @@ body {
 .list-label {
     text-align: center;
     font-size: large;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
 }
 
 code {
@@ -49,4 +57,8 @@ form {
     white-space: normal;
     margin-bottom: 20px;
     display: block;
+}
+
+input {
+    max-width: 300px;
 }
