@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react';
 
 
 const Generate = () => {
+<<<<<<< Updated upstream
 //function Generate() {
     const [data, setData] = useState('');
 
@@ -17,6 +18,21 @@ const Generate = () => {
             <Link to="/recipeSearch">Generate Recipes Here </Link>
         </form>
     ); 
+=======
+    //function Generate() {
+    
+
+    
+    return (
+
+        <div class = "genrec" >
+        <form onSubmit = { RecipeSearch } >
+        <Link to = "/recipeSearch" > Generate Recipes Here </Link> 
+        </form>
+
+        </div>
+    );
+>>>>>>> Stashed changes
 
 };
 

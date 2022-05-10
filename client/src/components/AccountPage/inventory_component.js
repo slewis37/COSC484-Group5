@@ -17,10 +17,19 @@ import RecipeSearch from '../recipeSearch/recipeSearch_component';
 
 
 const Inventory = () => {
+<<<<<<< Updated upstream
     const user = useSelector((state)=>state.users[0]);
     const [userData, setUserData] = useState({...user});
 	const dispatch = useDispatch();
     const mylist = userData.inventory.map((ingre, id)=>{return {id:id, task:ingre, complete:false}})
+=======
+    const user = useSelector((state) => state.users[0]);
+    const [userData, setUserData] = useState({...user });
+    const dispatch = useDispatch();
+    const mylist = userData.inventory.map((ingre, id) => { return { id: id, task: ingre, complete: false } })
+    //const mylist = userData.inventory.map((ingre, id) => { dispatch({ id: id, task: ingre, complete: false }) })
+   //const mylist = userData.inventory.map((ingre, id)=>{return {id:id, task:ingre, complete:false}})
+>>>>>>> Stashed changes
 
 
     const [ingreList, setIngreList] = useState(mylist);
@@ -45,6 +54,7 @@ const Inventory = () => {
         //adds ingredaisnts to a list 
         //this is where the code gets submitted to the database
     const addIngrediant = (userInput) => {
+<<<<<<< Updated upstream
             let copy = [...ingreList];
             copy = [...copy, { id: ingreList.length + 1, task: userInput, complete: false }];
             setIngreList(copy);
@@ -64,6 +74,30 @@ const Inventory = () => {
         handleFilter = { handleFilter }/> 
         <RequestIngre addIngrediant = { addIngrediant }/>
         <Generate RecipeSearch = { RecipeSearch }/> 
+=======
+        let copy = [...ingreList];
+        copy = [...copy, { id: ingreList.length + 1, task: userInput, complete: false }];
+        setIngreList(copy);
+        setUserData({...userData, inventory: ingreList.map(task => { return task.task }) })
+        dispatch(updateUser(userData));
+    }
+    return ( <div className = "column">
+
+
+
+        <div className = "App">
+        <header class = "page-header">
+        <h1> Welcome To Your Account! </h1> </header>
+
+        <main className = 'list-label' >
+        <p > <b > <em > Pantry List: </em>  </b> </p> </main>
+        <IngreList ingreList = { ingreList }
+        handleToggle = { handleToggle }
+        handleFilter = { handleFilter }/>  
+        <RequestIngre addIngrediant = { addIngrediant }/> 
+        <Generate RecipeSearch = { RecipeSearch }/>  
+        </div>
+>>>>>>> Stashed changes
         </div>
     );
 }

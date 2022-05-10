@@ -3,19 +3,45 @@ import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import styled from 'styled-components';
 import Searched from './Searched';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from ''
 
 
 function Search() {                 
-
+/*
     // Hooks for props 
     const [input, setInput] = useState('');
     const [recipeData, setRecipeData] = useState([]);
+    const [details, setDetails] = useState([])
     
+    let navigate = useNavigate();
+/*
+    const getRecipeList = axios.create({
+        baseURL: 'https://api.spoonacular.com/recipes/complexSearch',
+        params: {
+            apiKey: 'e3d391f4a48d4cedbfca4de34646cfdb',
+            input: input
+            
+        }
+    }); 
+
+    // get request to spoonacular api
+		getRecipeList.get().then(response => {
+			console.log(response.data);
+			//var x = JSON.stringify(response);
+			return response.data;
+			
+		}); 
+
     // on submit of the form call Searched() passing input and recipeData 
     const submitHandler = (e) => {
         e.preventDefault();
-        Searched( {input}, {recipeData, setRecipeData} );
+       // Searched( {input: input}, {recipeData:recipeData, setRecipeData: setRecipeData} );
+        setRecipeData(getRecipeList(e));
         setInput("");   
+        //Searched({recipeData});
+        navigate(`/searched/${input}`);
     };
     
     // set input 
@@ -23,67 +49,22 @@ function Search() {
         setInput(e.target.value)
     }
 
+    */
     // if recipeData has content display recipe cards beneath search bar
-    if (recipeData.length > 0) {
+    
         return (
             <div>
-            <header>
-            <form onSubmit={submitHandler}>
-                <div>
-                    <FaSearch />
-                    <input
-                        type="text"
-                        value={input}
-                        onChange={changeHandler}
-                    />
-                    <button>submit</button>
+            
                     
                 </div>
-            </form>
-            </header>
-
-            <main>
-            
-    <DetailWrapper>
-                <div>
-                    <h2>{recipeData?.title}</h2>
-                    <img src={recipeData?.image} alt="" />
-                </div>
-    </DetailWrapper>
-
-            </main>
-        </div> 
+    
+        
+           
         );
 
         // else (recipeData is empty), only display search bar
-        }else {
-            return(
-                <div>
-            <header>
-            <form onSubmit={submitHandler}>
-                <div>
-                    <FaSearch />
-                    <input
-                        type="text"
-                        value={input}
-                        onChange={changeHandler}
-                    />
-                    <button>submit</button>
-                    
-                </div>
-            </form>
-            </header>
-            <main>
-            
-                <div>
-                    
-                </div>
+        }
 
-            </main>
-        </div> 
-            );
-    }
-}
 
 const DetailWrapper = styled.div`
 	margin-top: 10rem;

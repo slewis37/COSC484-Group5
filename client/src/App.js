@@ -15,7 +15,12 @@ import Inventory from "./components/AccountPage/inventory_component";
 import RecipeSearch from "./components/recipeSearch/recipeSearch_component.js";
 import RecipeView from "./components/recipeView_component.js";
 import Register from "./components/AccountRegistration/register_component.js";
+<<<<<<< Updated upstream
 
+=======
+import Pages from "./pages";
+import Footer from "./components/footer_component.js";
+>>>>>>> Stashed changes
 
 // import Support from "./components/support_component.js";
 // import Cuisines from "./components/cuisines_component.js";
@@ -46,6 +51,7 @@ function App() {
         //   <RecipeSearch/>
         //   <Inventory/>
         // </>
+<<<<<<< Updated upstream
     <Router>
             <Navbar/> { /* <br/> */ } 
             <Routes>
@@ -59,6 +65,15 @@ function App() {
     </Router>
 );
 
+=======
+        <Router>
+        <Navbar/> { /* <br/> */ } 
+        
+        <Pages/>
+        <Footer/>
+        </Router>
+    );
+>>>>>>> Stashed changes
 }
 
 export default App;

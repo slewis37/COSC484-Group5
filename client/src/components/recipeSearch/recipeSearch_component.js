@@ -6,6 +6,8 @@
 
 import React from 'react';
 import Search from './Search';
+import Pages from '../../pages';
+import Searched from './Searched';
 
 const RecipeSearch = () => {
 
@@ -20,8 +22,8 @@ const RecipeSearch = () => {
           <main>
 
           
-          <Search/>
-          
+          <Searched/>
+          <Pages/>
           </main>	  
     </div>
   );
