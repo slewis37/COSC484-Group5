@@ -4,9 +4,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: url("background.jpg");
-    background-position: center;
-    height: 1000px;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .page-header {
@@ -39,6 +38,9 @@ code {
 
 .text-center {
     text-align: center;
+    margin-bottom: 10px;
+    display: inline-table;
+    padding: 14px 40px;
 }
 
 
@@ -47,6 +49,10 @@ code {
 form {
     text-align: center;
     white-space: normal;
-    margin-bottom: 20px;
-    display: block;
+    margin-bottom: 10px;
+    display: inline-table;
+}
+
+.genrec {
+    display: inline-block;
 }
