@@ -40,10 +40,14 @@ const Register = () => {
 					
 				<div class = "clear">
 					<button type = "reset" class = "cancel">Clear</button>
-					<button type = "submit" class = "signup">Sign Up</button>
+					<Link to = "/inventory" >
+						<button type = "submit" class = "signup">Sign Up</button>
+					</Link>
 				</div>
 			</div>
+			<Link to = "/">
 			<button type = "button" class = "home">Back to Homepage</button>
+			</Link>
 		</form>
 		</>
     );
