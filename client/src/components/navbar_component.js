@@ -16,13 +16,13 @@ const Navbar = () => {
             <div className="container2">
                 <div className="row space-between algin-items-center">
                     {/* <div className="logo"> */}
-                        <h2 className="logo" >Eazy Eats <em className = "tuColor">TU</em></h2>
+                        <h2 className="logo" style={{width: '324px !important'}}>Eazy Eats <em className = "tuColor">TU</em></h2>
                     {/* </div> */}
 
                     {/* <div className = "nav"> */}
-                        <ul className='nav-links'>
+                        <ul className='nav-links' style={{width: '624px !important'}}>
                           <li>
-                            <Link to="/" className='active'>Home</Link>
+                            <Link to="/">Home</Link>
                           </li>
                           <li>
                             <Link to="/recipeView">Recipies</Link>

@@ -4,6 +4,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-image: url("background.jpg");
+    background-position: center;
+    height: 6000px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -15,6 +17,13 @@ body {
 .list-label {
     text-align: center;
     font-size: large;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 200px;
 }
 
 code {
@@ -38,9 +47,6 @@ code {
 
 .text-center {
     text-align: center;
-    margin-bottom: 10px;
-    display: inline-table;
-    padding: 14px 40px;
 }
 
 
@@ -49,10 +55,10 @@ code {
 form {
     text-align: center;
     white-space: normal;
-    margin-bottom: 10px;
-    display: inline-table;
+    margin-bottom: 20px;
+    display: block;
 }
 
-.genrec {
-    display: inline-block;
+input {
+    max-width: 300px;
 }

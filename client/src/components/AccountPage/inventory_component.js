@@ -55,13 +55,17 @@ const Inventory = () => {
         setUserData({...userData, inventory: ingreList.map(task => { return task.task }) })
         dispatch(updateUser(userData));
     }
-    return ( <
+    return ( < div className = "column" >
+
+
+
+        <
         div className = "App" >
         <
         header class = "page-header" >
         <
-        h1 > Welcome To Your Account! < /h1> <
-        /header>
+        h1 > Welcome To Your Account! < /h1> < /
+        header >
 
         <
         main className = 'list-label' >
@@ -75,7 +79,9 @@ const Inventory = () => {
         RequestIngre addIngrediant = { addIngrediant }
         /> <
         Generate RecipeSearch = { RecipeSearch }
-        />  <
+        />  < /
+        div >
+        <
         /div>
     );
 }

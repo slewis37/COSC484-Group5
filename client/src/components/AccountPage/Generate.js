@@ -15,7 +15,7 @@ const Generate = () => {
     return (
 
         <
-        div >
+        div class = "genrec" >
         <
         form onClick = { RecipeSearch } >
         <
